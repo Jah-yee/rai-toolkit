@@ -28,6 +28,7 @@ from rai_toolkit.scorers.programmatic import (
     RegexPIIScorer,
     ResponseLengthScorer,
 )
+from rai_toolkit.scorers.task_completion import TaskCompletionScorer
 from rai_toolkit.scorers.tool_calls import ToolCallAccuracyScorer
 
 __all__ = [
@@ -51,6 +52,7 @@ __all__ = [
     "ScoreNormalizer",
     "ScorerResult",
     "SecurityJudge",
+    "TaskCompletionScorer",
     "ToolCallAccuracyScorer",
     "TransparencyJudge",
 ]

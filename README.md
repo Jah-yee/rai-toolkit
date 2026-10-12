@@ -654,6 +654,58 @@ walkthrough of a pass, an argument mismatch, a forbidden call, and an
 incomplete trace is in
 [docs/tool_call_accuracy.md](docs/tool_call_accuracy.md).
 
+`TaskCompletionScorer` is the matching opt-in scorer for task outcomes. It
+compares a harness-recorded `final_state` against declared required values and
+forbidden flags, and ignores the response text:
+
+```python
+from rai_toolkit.scorers import TaskCompletionScorer
+
+scorer = TaskCompletionScorer()
+criteria = {
+    "task_completion": {
+        "required": {"order_status": "shipped", "refund_issued": False},
+        "forbidden": ["escalated_to_human"],
+    }
+}
+
+result = scorer.score(
+    output="Done!",
+    final_state={
+        "order_status": "shipped",
+        "refund_issued": False,
+        "escalated_to_human": False,
+    },
+    run_complete=True,
+    success_criteria=criteria,
+)
+assert result.assessed and result.passed
+
+# The forbidden flag was not recorded, so the evidence is incomplete.
+missing = scorer.score(
+    output="Done!",
+    final_state={"order_status": "shipped", "refund_issued": False},
+    run_complete=True,
+    success_criteria=criteria,
+)
+assert not missing.assessed
+assert missing.details["skipped"] == "incomplete_final_state"
+assert missing.details["missing_forbidden_keys"] == ["escalated_to_human"]
+```
+
+`run_complete=True` is the caller's attestation that the run ended and every
+declared outcome was collected. With that attestation, an absent **required**
+key is a known absent outcome and counts as a mismatch. A **forbidden** flag
+must be recorded as an explicit `True` or `False`; an absent flag leaves the
+row unassessed, and a non-boolean value is invalid. If a flag stands for an
+event at any point in the run, the harness must record the whole interval,
+since a final snapshot alone cannot show that no earlier forbidden event
+happened. The default threshold of `1.0` requires every required outcome; a
+lower threshold allows partial completion, but any forbidden flag set to
+`True` always fails. The scorer measures the supplied evidence only. It cannot
+authenticate the harness or prove that an external side effect took place,
+and the pipeline does not collect final state automatically.
+
 ## CLI
 
 ```bash
