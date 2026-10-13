@@ -108,7 +108,7 @@ def write_responses(checkout, payload):
         (example / "fixture_manifest.json").read_text(encoding="utf-8")
     )
     text = json.dumps(payload, sort_keys=True, indent=2) + "\n"
-    (example / "responses.json").write_text(text, encoding="utf-8")
+    (example / "responses.json").write_text(text, encoding="utf-8", newline="")
     manifest["responses"]["sha256"] = hashlib.sha256(text.encode()).hexdigest()
     (example / "fixture_manifest.json").write_text(
         json.dumps(manifest, sort_keys=True, indent=2) + "\n", encoding="utf-8"
@@ -421,7 +421,7 @@ def test_a_non_object_manifest_root_or_boundary_is_rejected(checkout, tmp_path):
 def test_a_non_array_source_fixture_is_rejected(checkout, tmp_path):
     """The bundled fixture is an array; a repinned root of another type is refused by name."""
     text = '{"probes": []}\n'
-    (checkout / SOURCE_FIXTURE_NAME).write_text(text, encoding="utf-8")
+    (checkout / SOURCE_FIXTURE_NAME).write_text(text, encoding="utf-8", newline="")
     manifest_file = (
         checkout / "docs" / "examples" / "pii_pattern_replay" / "fixture_manifest.json"
     )
