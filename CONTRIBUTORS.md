@@ -8,7 +8,7 @@ SPDX-PackageName: rai-toolkit
 
 Thank you to everyone contributing code, tests, documentation, bug reports, and
 review to rai-toolkit. The table below credits merged contributions verified
-against `main` through October 15, 2026. It is alphabetical by GitHub handle
+against `main` through October 16, 2026. It is alphabetical by GitHub handle
 and is not a ranking or a complete record of non-code contributions.
 
 Karan Nisar ([@knisar](https://github.com/knisar)) created and maintains the
@@ -22,6 +22,7 @@ toolkit. Community contributions include:
 | [@arian-bozorgzad](https://github.com/arian-bozorgzad) | Source locations in JSONL dataset errors ([#87](https://github.com/wandb/rai-toolkit/pull/87)) |
 | [@Charansripadi](https://github.com/Charansripadi) | Deterministic task-completion scorer ([#113](https://github.com/wandb/rai-toolkit/pull/113)) |
 | [@denis-samatov](https://github.com/denis-samatov) | HR industry preset ([#24](https://github.com/wandb/rai-toolkit/pull/24)) |
+| [@ducanhnguyen223](https://github.com/ducanhnguyen223) | Repaired enterprise policy-pack example, documentation and offline regression tests ([#117](https://github.com/wandb/rai-toolkit/pull/117)) |
 | [@dvd233](https://github.com/dvd233) | Explicit adapter call-time options ([#65](https://github.com/wandb/rai-toolkit/pull/65)) |
 | [@EffNine](https://github.com/EffNine) | Configured scorer names in Weave ([#33](https://github.com/wandb/rai-toolkit/pull/33)) |
 | [@GBX-Max1220](https://github.com/GBX-Max1220) | Structured data boundaries in LLM judge prompts ([#114](https://github.com/wandb/rai-toolkit/pull/114)) |
