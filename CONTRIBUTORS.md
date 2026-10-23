@@ -8,7 +8,7 @@ SPDX-PackageName: rai-toolkit
 
 Thank you to everyone contributing code, tests, documentation, bug reports, and
 review to rai-toolkit. The table below credits merged contributions verified
-against `main` through October 16, 2026. It is alphabetical by GitHub handle
+against `main` through October 22, 2026. It is alphabetical by GitHub handle
 and is not a ranking or a complete record of non-code contributions.
 
 Karan Nisar ([@knisar](https://github.com/knisar)) created and maintains the
@@ -20,6 +20,7 @@ toolkit. Community contributions include:
 | [@abhnvgrg](https://github.com/abhnvgrg) | Model adapter contract documentation and conformance suite, and rejection of non-finite normalized scores ([#61](https://github.com/wandb/rai-toolkit/pull/61), [#68](https://github.com/wandb/rai-toolkit/pull/68)) |
 | [@adity982](https://github.com/adity982) | Groundedness scorer with verified evidence and deterministic tool-call accuracy scoring ([#13](https://github.com/wandb/rai-toolkit/pull/13), [#72](https://github.com/wandb/rai-toolkit/pull/72)) |
 | [@arian-bozorgzad](https://github.com/arian-bozorgzad) | Source locations in JSONL dataset errors ([#87](https://github.com/wandb/rai-toolkit/pull/87)) |
+| [@bercedev](https://github.com/bercedev) | Clear CLI errors for unknown dataset names, preserving suggestions and loader failures ([#119](https://github.com/wandb/rai-toolkit/pull/119)) |
 | [@Charansripadi](https://github.com/Charansripadi) | Deterministic task-completion scorer ([#113](https://github.com/wandb/rai-toolkit/pull/113)) |
 | [@denis-samatov](https://github.com/denis-samatov) | HR industry preset ([#24](https://github.com/wandb/rai-toolkit/pull/24)) |
 | [@ducanhnguyen223](https://github.com/ducanhnguyen223) | Repaired enterprise policy-pack example, documentation and offline regression tests ([#117](https://github.com/wandb/rai-toolkit/pull/117)) |
@@ -27,7 +28,7 @@ toolkit. Community contributions include:
 | [@EffNine](https://github.com/EffNine) | Configured scorer names in Weave ([#33](https://github.com/wandb/rai-toolkit/pull/33)) |
 | [@GBX-Max1220](https://github.com/GBX-Max1220) | Structured data boundaries in LLM judge prompts ([#114](https://github.com/wandb/rai-toolkit/pull/114)) |
 | [@HarshRajSinghania](https://github.com/HarshRajSinghania) | Runnable offline tool-call accuracy tutorial ([#104](https://github.com/wandb/rai-toolkit/pull/104)) |
-| [@KunyangZhang](https://github.com/KunyangZhang) | Keyword matching that preserves inflections without matching inside other words, and unassessed results for unsupported output formats ([#73](https://github.com/wandb/rai-toolkit/pull/73), [#74](https://github.com/wandb/rai-toolkit/pull/74)) |
+| [@KunyangZhang](https://github.com/KunyangZhang) | Keyword and derivative matching with false-positive controls and case-insensitive custom keywords, and unassessed results for unsupported output formats ([#73](https://github.com/wandb/rai-toolkit/pull/73), [#74](https://github.com/wandb/rai-toolkit/pull/74), [#90](https://github.com/wandb/rai-toolkit/pull/90)) |
 | [@M4h1m4](https://github.com/M4h1m4) | Vendor-neutral `CallableModel` adapter ([#64](https://github.com/wandb/rai-toolkit/pull/64)) |
 | [@nightcityblade](https://github.com/nightcityblade) | Normalized groundedness evidence matching ([#18](https://github.com/wandb/rai-toolkit/pull/18)) |
 | [@NourMoftah](https://github.com/NourMoftah) | CLI version reporting and policy-lint failure when no YAML files are checked ([#83](https://github.com/wandb/rai-toolkit/pull/83), [#84](https://github.com/wandb/rai-toolkit/pull/84)) |
