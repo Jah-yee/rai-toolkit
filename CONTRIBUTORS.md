@@ -8,7 +8,7 @@ SPDX-PackageName: rai-toolkit
 
 Thank you to everyone contributing code, tests, documentation, bug reports, and
 review to rai-toolkit. The table below credits merged contributions verified
-against `main` through October 22, 2026. It is alphabetical by GitHub handle
+against `main` through October 26, 2026. It is alphabetical by GitHub handle
 and is not a ranking or a complete record of non-code contributions.
 
 Karan Nisar ([@knisar](https://github.com/knisar)) created and maintains the
@@ -19,6 +19,7 @@ toolkit. Community contributions include:
 | [@a0927929980-dot](https://github.com/a0927929980-dot) | Groundedness handling for behavioral refusals ([#17](https://github.com/wandb/rai-toolkit/pull/17)) |
 | [@abhnvgrg](https://github.com/abhnvgrg) | Model adapter contract documentation and conformance suite, and rejection of non-finite normalized scores ([#61](https://github.com/wandb/rai-toolkit/pull/61), [#68](https://github.com/wandb/rai-toolkit/pull/68)) |
 | [@adity982](https://github.com/adity982) | Groundedness scorer with verified evidence and deterministic tool-call accuracy scoring ([#13](https://github.com/wandb/rai-toolkit/pull/13), [#72](https://github.com/wandb/rai-toolkit/pull/72)) |
+| [@alanveloper-epam](https://github.com/alanveloper-epam) | Clear source and record diagnostics for surplus CSV fields, with regression tests ([#122](https://github.com/wandb/rai-toolkit/pull/122)) |
 | [@arian-bozorgzad](https://github.com/arian-bozorgzad) | Source locations in JSONL dataset errors ([#87](https://github.com/wandb/rai-toolkit/pull/87)) |
 | [@bercedev](https://github.com/bercedev) | Clear CLI errors for unknown dataset names, preserving suggestions and loader failures ([#119](https://github.com/wandb/rai-toolkit/pull/119)) |
 | [@Charansripadi](https://github.com/Charansripadi) | Deterministic task-completion scorer ([#113](https://github.com/wandb/rai-toolkit/pull/113)) |
